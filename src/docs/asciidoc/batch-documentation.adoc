@@ -1,0 +1,56 @@
+= Batch Sample Project
+Created By BE 플랫폼개발팀
+
+:toc: left
+:toclevels: 2
+:sectnums:
+
+== Introduction
+
+- **코드 베이스**에 포함된 job 별로 개괄적 설명을 서술한 문서입니다.
+- job , step, job parameter, job 실행 예시가 포함됩니다.
+
+== Job Configurations
+
+=== Job: `PersonInsertJobConfiguration`
+
+- sql 파일로부터 데이터를 자동저장하고, 해당 데이터를 변환해 다시 저장하는 job입니다.
+
+// [source,java]
+// ----
+// include::../../main/java/com/tina/batch/job/PersonInsertJobConfiguration.java[]
+// ----
+
+==== Steps
+
+* `importPersonStep`
+
+==== Step Details
+
+[cols="1,2", options="header"]
+|===
+| Step Name | Description
+
+| `importPersonStep`
+| sql 파일로부터 데이터를 자동저장하고, 해당 데이터를 변환해 다시 저장하는 step입니다.
+|===
+
+
+==== Job Parameters
+
+[cols="1,2", options="header"]
+|===
+| Parameter Name | Description
+
+| `date`
+| LocalDate 타입의 job parameter입니다.
+
+| `chunkSize`
+| Long 타입의 chunkSize입니다.
+|===
+
+
+== Job 실행 예시
+
+
+== Job 실행 결과
